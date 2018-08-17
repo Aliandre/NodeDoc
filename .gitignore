@@ -1,0 +1,7 @@
+
+.vs/
+NodeDocConsole/bin
+NodeDocConsole/obj
+NodeDocLib/bin
+NodeDocLib/obj
+*.user
