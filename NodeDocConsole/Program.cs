@@ -14,7 +14,7 @@ namespace NodeDocConsole
                 path = args[0];
 
             var project = new Project(path);
-            project.Export();
+            project.Export(Path.Combine(path, "out.tex"));
         }
     }
 }
