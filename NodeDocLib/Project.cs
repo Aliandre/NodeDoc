@@ -81,10 +81,11 @@ namespace NodeDocLib
                 writer.WriteLine(GetSectionLevel(entry.Name, depth + 1));
                 writer.WriteLine(@"\label{" + entry.Name + "}");
 
-                if (entry.Tags.Count > 0)
+                if (entry.Tags.Count > 1)
                 {
                     writer.Write(@"Linked categories: ");
-                    foreach (var tag in entry.Tags)
+                    // Skipping the main category which is added as tag
+                    foreach (var tag in entry.Tags.Skip(1))
                     {
                         writer.WriteLine("\"" + tag + "\" (see \\ref{" + tag + "} page \\pageref{" + tag + "}) ");
                     }
